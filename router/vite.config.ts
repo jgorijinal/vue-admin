@@ -1,7 +1,12 @@
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 
-// https://vitejs.dev/config/
+// @ts-ignore
+import alias from './vite/alias';
+
 export default defineConfig({
-  plugins: [vue()]
+  plugins: [vue()],
+  resolve:{
+    alias
+  }
 })
