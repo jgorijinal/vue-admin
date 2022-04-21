@@ -1,4 +1,3 @@
-// @ts-ignore
 import path from 'path';
 import {AliasOptions} from 'vite';
 
