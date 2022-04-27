@@ -7,12 +7,16 @@
     type:{
       type:String,
       default:'text'
+    },
+    modelValue:{
+      type:String
     }
   })
 </script>
 
 <template>
-  <input :type="props.type" :placeholder="props.placeholder" class="hd-input"/>
+  <input :type="props.type" :placeholder="props.placeholder" class="hd-input"
+         :value="props.modelValue"  @input="$emit('update:modelValue' , $event.target.value)" />
 </template>
     
 <style lang="scss" scoped>

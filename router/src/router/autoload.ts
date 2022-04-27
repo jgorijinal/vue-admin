@@ -24,7 +24,7 @@ function getRoutes(){
 }
 
 
-function getRouteByModules(file: string, module: { [p: string]: any }) {
+function getRouteByModules(file: string, module: { [key: string]: any }) {
   const name = file.split('/').pop()?.split('.')[0].toLowerCase();
   const obj = {
     path: `/${name}`,

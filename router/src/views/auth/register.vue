@@ -1,17 +1,13 @@
 <script lang="ts" setup>
-import {reactive} from 'vue';
-const form = reactive({
-  account:'abc',
-  password:''
-})
+
 </script>
 <template>
   <div class="bg-slate-100 h-screen  flex justify-center items-start md:items-center  p-5" >
     <div class="hd-wrapper">
       <div class="p-5">
-        <h2 class="text-center text-gray-700 text-lg p-4">会员登录</h2>
+        <h2 class="text-center text-gray-700 text-lg p-4">会员注册</h2>
         <div>
-          <hdInput  type="text"  class="mt-4" v-model="form.account"/>
+          <hdInput  type="text"  class="mt-4"/>
           <hdInput type="password" placeholder="请输入密码" class=" mt-5" />
         </div>
         <button class="hd-button mt-5 " type="submit">登录</button>
@@ -45,4 +41,3 @@ const form = reactive({
   @apply hidden md:block
 }
 </style>
-
