@@ -13,7 +13,7 @@ import * as _ from 'lodash';
         envs[key] = value === 'true'
       }
       else if(/^\d+$/.test(value)) {
-        envs[key] = parseInt(value)
+        envs[key] = Number(value)
       }else if (value ==='null') {
         envs[key] = null
       }else if (value ==='undefined') {

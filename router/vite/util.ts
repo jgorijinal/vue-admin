@@ -7,7 +7,7 @@ export function parseEnv(env: Record<string, any>) { //转换env环境变量的�
     if (value === 'true' || value === 'false') {
       envs[key] = value === 'true';
     } else if (/^\d+$/.test(value)) {
-      envs[key] = parseInt(value);
+      envs[key] = Number(value);
     } else if (value === 'null') {
       envs[key] = null;
     } else if (value === 'undefined') {
