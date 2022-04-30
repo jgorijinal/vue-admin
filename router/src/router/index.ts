@@ -1,10 +1,10 @@
 import { createRouter, createWebHashHistory, RouteRecordRaw } from "vue-router";
 import { App } from "vue";
 import routes from "./routes";
-import { getRoutes } from "./autoload";
+import AutoloadRoutes from "./autoload";
 const router = createRouter({
   history: createWebHashHistory(),
-  routes: [...routes, ...getRoutes()],
+  routes: [...routes, ...AutoloadRoutes],
 });
 // console.log(getRoutes())
 export function setupRouter(app: App) {

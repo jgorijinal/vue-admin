@@ -8,7 +8,8 @@ import * as _ from 'lodash';
   private getEnvs():ImportMetaEnv {
     const envs = _.cloneDeep(import.meta.env)
 
-    Object.entries(envs).forEach(([key,value])=>{
+    Object.entries(envs).forEach(([key,value] )=>{
+
       if(value === 'true' || value === 'false') {
         envs[key] = value === 'true'
       }

@@ -1,4 +1,6 @@
 import {RouteRecordRaw} from 'vue-router';
+import { env } from '@/util/helper';
+
 //import.meta.globEager(pattern)
 const layoutsModules = import.meta.globEager('../layouts/*.vue'); //获取布局路由
 const viewsModules = import.meta.globEager('../views/**/*.vue');  //获取布局路由对应的子路由
@@ -49,5 +51,5 @@ function getChildRouteByModules(layoutsRoute: RouteRecordRaw) {
   });
   return childRoutes;
 }
-
-export { getRoutes } ;
+const routes = env.VITE_ROUTER_AUTOLOAD ? getRoutes() : [] as RouteRecordRaw[]
+export default  routes;
